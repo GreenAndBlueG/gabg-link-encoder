@@ -10,9 +10,9 @@
             let b64link;
             if (link.length > 0) {
                 if(uploader != ""){
-                    b64link = "https://links.gamesdrive.net/#/link/" + Base64.encodeURI(link, {urlsafe: true,}) + '.' + Base64.encodeURI(uploader, {urlsafe: true,});
+                    b64link = "https://link-encoder.gabg.site/#/link/" + Base64.encodeURI(link, {urlsafe: true,}) + '.' + Base64.encodeURI(uploader, {urlsafe: true,});
                 }else{
-                    b64link = "https://links.gamesdrive.net/#/link/" + Base64.encodeURI(link, {urlsafe: true,});
+                    b64link = "https://link-encoder.gabg.site/#/link/" + Base64.encodeURI(link, {urlsafe: true,});
                 }
                 data.push(b64link);
             }
@@ -26,29 +26,27 @@
 <main>
     <div class="d-flex justify-content-center text-center">
     <div class="container">
-        <h1>Gamesdrive Bulk Link Encrypter</h1>
+        <h1>GABG Bulk Link Encoder</h1>
     <textarea
-        placeholder="Enter Download Links (each link seperated by new line!)"
+        placeholder="Inserisci i link (un link per linea!)"
         class="form-control"
         id="encode"
     />
     <input
         bind:value={uploader}
-        placeholder="Uploader (optional, default: Gamesdrive)"
+        placeholder="Fornitore (facoltativo, valore predefinito: GABG)"
         class="form-control"
         id="encode"
     />
     <textarea
         class="form-control"
         id="links"
-        placeholder="Base64 Encrypted Links"
+        placeholder="Link codificati in Base64"
         readonly
     />
-    <a href="/#/">Single link encrypter</a>
+    <a href="/#/">Condificatore di link singoli</a>
     <br>
-    <button class="btn btn-lg btn-primary" on:click={generateLinks}>Encrypt</button>
-    <br>
-    <small><a href="https://github.com/crackhub-dev/gamesdrive-link-encrypter" target="_blank"><i class="bi bi-github"></i></a></small>
+    <button class="btn btn-lg btn-primary" on:click={generateLinks}>Codifica!</button>
 </div>
 </div>
 </main>

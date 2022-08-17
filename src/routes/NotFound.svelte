@@ -1,5 +1,5 @@
-<h1>Not Found</h1>
-<p>This route doesn't exist.</p>
+<h1>Non trovato!</h1>
+<p>Questa destinazione non esiste.</p>
 
 <style>
 	h1 {

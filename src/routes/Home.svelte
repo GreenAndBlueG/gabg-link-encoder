@@ -1,4 +1,4 @@
-<script>	
+<script>
 	import { Base64 } from 'js-base64';
 	let data = '';
 	let base64 = '';
@@ -13,33 +13,29 @@
 		});
 	}
 	</script>
-	
+
 
 	<main>
-	
-		
+
+
 	<div class="d-flex justify-content-center text-center" id="encode">
 	  <div class="container">
-		<h1>Gamesdrive Link Encrypter</h1>
-	  <input bind:value={data} on:input={() => getBase64()} placeholder="Enter Download Link" class="form-control" id="encode"/>
-	  <input bind:value={uploader} on:input={() => getBase64()} placeholder="Uploader (optional, default: Gamesdrive)" class="form-control" id="encode" />
+		<h1>GABG Link Encoder</h1>
+	  <input bind:value={data} on:input={() => getBase64()} placeholder="Inserisci i link da condificare" class="form-control" id="encode"/>
+	  <input bind:value={uploader} on:input={() => getBase64()} placeholder="Fornitore (facoltativo, valore predefinito: GABG)" class="form-control" id="encode" />
 	  {#if base64 == ''}
-	  <textarea class="form-control" placeholder="Base64 Encrypted Link" readonly></textarea>
+	  <textarea class="form-control" placeholder="Link codificato in Base64" readonly></textarea>
 	  {:else if uploaderB64 == ''}
-	  <textarea class="form-control" placeholder="Base64 Encrypted Link" readonly>https://links.gamesdrive.net/#/link/{base64}</textarea>
+	  <textarea class="form-control" placeholder="Link codificato in Base64" readonly>https://link-encoder.gabg.site/#/link/{base64}</textarea>
 	  {:else}
-	  <textarea class="form-control" placeholder="Base64 Encrypted Link" readonly>https://links.gamesdrive.net/#/link/{base64}.{uploaderB64}</textarea>
+	  <textarea class="form-control" placeholder="Link codificato in Base64" readonly>https://link-encoder.gabg.site/#/link/{base64}.{uploaderB64}</textarea>
 
 	  {/if}
-	  <a href="/#/bulk">Bulk link encrypter</a>
-	<div class="text-center">
-	  <small><a href="https://github.com/crackhub-dev/gamesdrive-link-encrypter" target="_blank"><i class="bi bi-github"></i></a></small>
-	</div>
+	  <a href="/#/bulk">Codificatore di link in massa</a>
 	</div>
 	</div>
 	</main>
-	
+
 	<style>
 
 	</style>
-	
