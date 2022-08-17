@@ -21,7 +21,7 @@
 		{:else}
 		<h3>Link fornito da <b>GABG<b></h3>
 	{/if}
-	<a href="{decrypted_url}"><button class="btn btn-primary btn-lg"><i class="bi bi-link"></i> Portami a destinazione</button></a>
+	<a href="{decrypted_url}"><button class="btn btn-primary btn-lg"><i class="bi bi-link-45deg"></i> Portami a destinazione</button></a>
 	<br>
 	<small>Questo link ti porterà verso <b>{domain}</b></small>
 </div>
